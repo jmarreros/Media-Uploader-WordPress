@@ -34,7 +34,7 @@ add_action("admin_enqueue_scripts", "dcms_insert_script_upload");
 
 function dcms_insert_script_upload(){
 	wp_enqueue_media();
-    wp_register_script('my_upload', plugins_url().'/upload-image/js/upload.js', array('jquery'), '1', true );
+    wp_register_script('my_upload', plugin_dir_url( __FILE__ ).'/js/upload.js', array('jquery'), '1', true );
     wp_enqueue_script('my_upload');
 }
 
